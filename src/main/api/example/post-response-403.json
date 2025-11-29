@@ -1,0 +1,8 @@
+{
+  "type": "/problem-details/types/forbidden",
+  "title": "Forbidden",
+  "status": 403,
+  "detail": "You do not have permission to access this resource.",
+  "instance": "/posts"
+}
+

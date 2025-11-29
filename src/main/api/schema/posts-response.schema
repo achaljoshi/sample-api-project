@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "description": "List of blog posts",
+  "items": {
+    "type": "object",
+    "required": ["userId", "id", "title", "body"],
+    "properties": {
+      "userId": {
+        "type": "integer",
+        "description": "User ID who created the post",
+        "minimum": 1
+      },
+      "id": {
+        "type": "integer",
+        "description": "Unique post identifier",
+        "minimum": 1
+      },
+      "title": {
+        "type": "string",
+        "description": "Title of the blog post",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "body": {
+        "type": "string",
+        "description": "Content/body of the blog post",
+        "minLength": 1,
+        "maxLength": 5000
+      },
+      "link": {
+        "type": "string",
+        "description": "URL link to the full article",
+        "minLength": 0,
+        "maxLength": 500,
+        "pattern": "^https?://.+"
+      },
+      "comment_count": {
+        "type": "integer",
+        "description": "Number of comments on the post",
+        "minimum": 0
+      }
+    },
+    "additionalProperties": false
+  }
+}
+

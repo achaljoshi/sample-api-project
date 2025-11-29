@@ -1,0 +1,19 @@
+# Continents API Paths
+/continents:
+  get:
+    summary: List all continents
+    description: Retrieve a list of all continents with detailed information
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/continents-response.schema'
+      '500':
+        description: Internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+

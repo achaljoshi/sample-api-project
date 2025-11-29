@@ -1,0 +1,8 @@
+{
+  "type": "/problem-details/types/not-found",
+  "title": "Resource not found",
+  "status": 404,
+  "detail": "The requested post with ID {post_id} was not found.",
+  "instance": "/posts/{post_id}"
+}
+

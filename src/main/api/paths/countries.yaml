@@ -1,0 +1,19 @@
+# Countries API Paths
+/countries:
+  get:
+    summary: List all countries
+    description: Retrieve a list of all countries with name and code
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/countries-response.schema'
+      '500':
+        description: Internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+
