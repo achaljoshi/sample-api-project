@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ErrorResponse": {
+      "title": "ErrorResponse",
+      "type": "object",
+      "description": "This is ErrorResponse payload as proposed in RFC 7807",
+      "properties": {
+        "type": {
+          "description": "A URI reference that identifies the problem type. Ideally, the URI should resolve to human-readable information describing the problem.",
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 500,
+          "examples": ["/problem-details/types/not-found"]
+        },
+        "title": {
+          "description": "A human-readable description of the problem type (i.e. the error that has occurred), meaning that it should always be the same for the same type.",
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 500,
+          "pattern": "[\\(\\)a-zA-Z0-9-\\s]+",
+          "examples": ["Resource not found"]
+        },
+        "status": {
+          "description": "This reflects the HTTP status code and is a convenient way to make problem details self-contained. That way they can be used in contexts where HTTP status codes are not available.",
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 600,
+          "examples": [404]
+        },
+        "detail": {
+          "description": "A human-readable description of the problem instance, explaining why the problem occurred in this specific case.",
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 500
+        },
+        "instance": {
+          "description": "A URI reference that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced.",
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        }
+      },
+      "required": ["type", "title", "status", "detail"]
+    }
+  },
+  "$ref": "#/definitions/ErrorResponse"
+}
+
