@@ -1,0 +1,9 @@
+{
+  "created_at": "1967-03-15T11:58:51.0Z",
+  "ignored": false,
+  "reason": null,
+  "repository_url": "http://example.com/repos/owner/repo",
+  "subscribed": true,
+  "url": "https://api.example.com/repos/owner/repo/subscription"
+}
+

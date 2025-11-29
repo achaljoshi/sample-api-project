@@ -1,8 +1,0 @@
-{
-  "type": "/problem-details/types/unauthorized",
-  "title": "Unauthorized",
-  "status": 401,
-  "detail": "Authentication required. Please provide valid credentials.",
-  "instance": "/posts"
-}
-

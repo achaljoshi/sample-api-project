@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Repository Subscription Update Request Schema",
+  "required": ["subscribed"],
+  "properties": {
+    "subscribed": {
+      "type": "boolean",
+      "description": "Whether the user is subscribed to notifications for this repository",
+      "default": false
+    },
+    "ignored": {
+      "type": "boolean",
+      "description": "Whether notifications from this repository are ignored",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}
+

@@ -25,6 +25,9 @@ List of all the continents on the earth with area, population, countries, lines,
 ### PUT /projects/{project_id}
 Update an existing project with new configuration
 
+### PUT /repos/{owner}/{repo}/subscription
+Set the subscription status for a repository
+
 ## Structure
 
 - `schema/` - JSON Schema definitions for request, response, and error

@@ -1,8 +1,0 @@
-{
-  "type": "/problem-details/types/bad-request",
-  "title": "Bad request",
-  "status": 400,
-  "detail": "Invalid request parameters. Please check your input.",
-  "instance": "/posts"
-}
-

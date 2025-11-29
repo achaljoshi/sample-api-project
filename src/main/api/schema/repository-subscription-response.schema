@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "Repository Subscription Response Schema",
+  "required": ["subscribed", "ignored", "url"],
+  "properties": {
+    "subscribed": {
+      "type": "boolean",
+      "description": "Whether the user is subscribed to notifications for this repository"
+    },
+    "ignored": {
+      "type": "boolean",
+      "description": "Whether notifications from this repository are ignored"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Timestamp when the subscription was created",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z?$"
+    },
+    "reason": {
+      "type": ["string", "null"],
+      "description": "Reason for the subscription status, can be null",
+      "minLength": 0,
+      "maxLength": 500
+    },
+    "repository_url": {
+      "type": "string",
+      "description": "URL of the repository",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^https?://.+"
+    },
+    "url": {
+      "type": "string",
+      "description": "URL of the subscription resource",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^https?://.+"
+    }
+  },
+  "additionalProperties": false
+}
+

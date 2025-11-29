@@ -1,0 +1,64 @@
+# Repository Subscription API Paths
+/repos/{owner}/{repo}/subscription:
+  put:
+    summary: Set a repository subscription
+    description: Set the subscription status for a repository
+    parameters:
+      - name: owner
+        in: path
+        required: true
+        schema:
+          type: string
+          minLength: 1
+          maxLength: 100
+        description: The account owner of the repository
+      - name: repo
+        in: path
+        required: true
+        schema:
+          type: string
+          minLength: 1
+          maxLength: 100
+        description: The name of the repository
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schema/repository-subscription-request.schema'
+          example:
+            $ref: '../example/repository-subscription-request.json'
+    responses:
+      '200':
+        description: Subscription updated successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/repository-subscription-response.schema'
+            example:
+              $ref: '../example/repository-subscription-response-200.json'
+      '400':
+        description: Bad request
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+      '401':
+        description: Unauthorized
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+      '404':
+        description: Repository not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+      '500':
+        description: Internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+

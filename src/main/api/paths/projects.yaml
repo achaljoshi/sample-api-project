@@ -33,16 +33,5 @@
           application/json:
             schema:
               $ref: '../schema/api-error.schema'
-      '404':
-        description: Project not found
-        content:
-          application/json:
-            schema:
-              $ref: '../schema/api-error.schema'
-      '500':
-        description: Internal server error
-        content:
-          application/json:
-            schema:
-              $ref: '../schema/api-error.schema'
+      
 

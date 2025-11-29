@@ -1,8 +1,0 @@
-{
-  "type": "/problem-details/types/internal-server-error",
-  "title": "Internal server error",
-  "status": 500,
-  "detail": "An unexpected error occurred on the server. Please try again later.",
-  "instance": "/posts"
-}
-
