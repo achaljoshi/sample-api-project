@@ -1,0 +1,62 @@
+# Projects API Paths
+/projects/{project_id}:
+  put:
+    summary: Update a project
+    description: Update an existing project with new configuration
+    parameters:
+      - name: project_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          minimum: 1
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schema/project-update-request.schema'
+          example:
+            $ref: '../example/project-update-request.json'
+    responses:
+      '200':
+        description: Project updated successfully
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                domain:
+                  type: string
+                headerAuthorization:
+                  type: string
+                minRetries:
+                  type: integer
+                retryDelaySecs:
+                  type: integer
+                updatedAt:
+                  type: string
+                  format: date-time
+      '400':
+        description: Bad request
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+      '404':
+        description: Project not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+      '500':
+        description: Internal server error
+        content:
+          application/json:
+            schema:
+              $ref: '../schema/api-error.schema'
+

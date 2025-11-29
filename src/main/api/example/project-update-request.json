@@ -1,0 +1,8 @@
+{
+  "name": "updated-project",
+  "domain": "api.example.com",
+  "headerAuthorization": "",
+  "minRetries": 1,
+  "retryDelaySecs": 5
+}
+

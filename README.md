@@ -22,6 +22,9 @@ List of all countries with name and code
 ### GET /continents
 List of all the continents on the earth with area, population, countries, lines, etc.
 
+### PUT /projects/{project_id}
+Update an existing project with new configuration
+
 ## Structure
 
 - `schema/` - JSON Schema definitions for request, response, and error
