@@ -1,0 +1,8 @@
+{
+  "type": "/problem-details/types/not-found",
+  "title": "Project not found",
+  "status": 404,
+  "detail": "The requested project with ID {project_id} was not found.",
+  "instance": "/projects/{project_id}"
+}
+

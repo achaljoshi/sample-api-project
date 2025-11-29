@@ -24,23 +24,9 @@
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                id:
-                  type: integer
-                name:
-                  type: string
-                domain:
-                  type: string
-                headerAuthorization:
-                  type: string
-                minRetries:
-                  type: integer
-                retryDelaySecs:
-                  type: integer
-                updatedAt:
-                  type: string
-                  format: date-time
+              $ref: '../schema/project-response.schema'
+            example:
+              $ref: '../example/project-response-200.json'
       '400':
         description: Bad request
         content:
